@@ -72,6 +72,8 @@ For the audited base, use `github:OnixResearch/onix-artifact-public/f379f2583b5d
 
 Cargo and Nix consumers must select the same immutable revision and regenerate their own locks and current source-selection projections. A changed repository URL or profile digest is not interchangeable with a historical evidence-bound identity. Receiver-local migration and its focused contract checks remain required. Artifact's live Cairn input uses a separately pinned public assembly; Cairn can consume the audited non-flake base without following Artifact's lifecycle input.
 
+The operational lifecycle input is pinned to public Cairn `acb4c3d2cb90b231e07a6b71115c79adde46349c`, whose receiver checker admits this exact four-member workspace without broadening the historical three-package release profile or two-package authentication consumer scope. Cairn still consumes audited Artifact base `f379f2583b5d152cfd6d58919738652861793c90`. This metadata-only receiver update does not resolve the eight missing traceability IDs or unavailable readiness observation: lifecycle completion remains pending, with no sync/archive execution or release claim.
+
 This is source-only publication, **NOT RELEASE-ADMITTED**. Anonymous source access proves neither build/test success nor source correctness, consumer migration, license authority beyond the recorded grants, provenance authentication, or release eligibility. Historical Radicle receipts and public `did:key` identities remain unchanged and make only their original bounded claims.
 
 The standalone `artifact-auth`, `artifact-transfer`, and `artifact-binding` repositories are deprecated. Keep their immutable revisions only for source history and rollback. All active development and new consumer pins must use this workspace.

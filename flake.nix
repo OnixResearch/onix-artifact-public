@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     cairn = {
-      url = "github:OnixResearch/cairn-public/e25e782f8dafac98b906b48b9d15c965996e18f9";
+      url = "github:OnixResearch/cairn-public/acb4c3d2cb90b231e07a6b71115c79adde46349c";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
