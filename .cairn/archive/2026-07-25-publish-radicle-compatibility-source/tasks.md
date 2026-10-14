@@ -1,0 +1,5 @@
+- [x] [serial] Establish the exact reviewed worktree and rerun positive and negative compatibility tests. r[artifact_auth.radicle_publication.identity]
+- [x] [serial] Initialize the public Radicle repository and configure the three delegates with threshold two. r[artifact_auth.radicle_publication.governance]
+- [x] [serial] Converge the exact revision to Aspen and the desktop replica without granting seed authority. r[artifact_auth.radicle_publication.convergence]
+- [x] [serial] Verify the upload-pack-only HTTPS route and undeclared-repository rejection. r[artifact_auth.radicle_publication.transport]
+- [x] [serial] Emit and validate a typed BLAKE3 publication receipt with explicit non-claims. r[artifact_auth.radicle_publication.evidence]
