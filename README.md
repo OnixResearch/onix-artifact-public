@@ -64,6 +64,16 @@ See the [candidate API](docs/publication/API.md), [source inventory](docs/public
 
 Packages are distributed from immutable Git revisions and set `publish = false`; crates.io is not a release channel. Product repositories must align Cargo and Nix to the same reviewed source identity.
 
+### Independent public source (NOT RELEASE-ADMITTED)
+
+Current source discovery uses [`OnixResearch/onix-artifact-public`](https://github.com/OnixResearch/onix-artifact-public). The audited independent base is `f379f2583b5d152cfd6d58919738652861793c90`, a parentless source export of historical Artifact snapshot `2a34ddd92a4eaf57d4d0de792dfa9aa4ea105121`. Only that export and scoped metadata descendants are published; original private repositories and their histories are not this mirror's ancestry.
+
+For the audited base, use `github:OnixResearch/onix-artifact-public/f379f2583b5d152cfd6d58919738652861793c90` with `flake = false`, or the same exact revision from `https://github.com/OnixResearch/onix-artifact-public.git` for Cargo. The base deliberately retains its historical repository metadata. Current repository/release projections on metadata descendants identify this public mirror instead; they do not rewrite the extraction source cohort, grants, or frozen evidence.
+
+Cargo and Nix consumers must select the same immutable revision and regenerate their own locks and current source-selection projections. A changed repository URL or profile digest is not interchangeable with a historical evidence-bound identity. Receiver-local migration and its focused contract checks remain required. Artifact's live Cairn input uses a separately pinned public assembly; Cairn can consume the audited non-flake base without following Artifact's lifecycle input.
+
+This is source-only publication, **NOT RELEASE-ADMITTED**. Anonymous source access proves neither build/test success nor source correctness, consumer migration, license authority beyond the recorded grants, provenance authentication, or release eligibility. Historical Radicle receipts and public `did:key` identities remain unchanged and make only their original bounded claims.
+
 The standalone `artifact-auth`, `artifact-transfer`, and `artifact-binding` repositories are deprecated. Keep their immutable revisions only for source history and rollback. All active development and new consumer pins must use this workspace.
 
 Historical `artifact-auth` revision `799459346d5416fbd7b9f55840a7371441b55afa` remains a valid compatibility source for existing Molten, Mantle, and Valence pins. Moving a consumer to this workspace requires a repo-local Cairn change, exact source/package/license checks, generated Cargo/Nix locks, focused positive and negative tests, and rollback evidence.
@@ -94,7 +104,7 @@ Full repository gate:
 ```console
 nickel typecheck config/repository.ncl
 nickel typecheck release/profile.ncl
-nix run path:../cairn#cairn -- validate --root . --policy cairn-policy/generated/cairn-policy.json
+nix run --inputs-from . cairn#cairn -- validate --root . --policy cairn-policy/generated/cairn-policy.json
 nix flake check path:$PWD -L
 ```
 

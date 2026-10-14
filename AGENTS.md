@@ -31,7 +31,7 @@ nix develop -c cargo check -p artifact-auth-ed25519 --no-default-features --targ
 nix develop -c cargo check -p artifact-transfer-core --no-default-features --target wasm32-unknown-unknown
 nickel typecheck config/repository.ncl
 nickel typecheck release/profile.ncl
-nix run path:../cairn#cairn -- validate --root . --policy cairn-policy/generated/cairn-policy.json
+nix run --inputs-from . cairn#cairn -- validate --root . --policy cairn-policy/generated/cairn-policy.json
 nix flake check path:$PWD -L
 ```
 

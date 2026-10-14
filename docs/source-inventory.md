@@ -32,7 +32,7 @@ This inventory fixes the extraction cohort. Nix SRI BLAKE3 identities bind exact
 | `OnixResearch/artifact-transfer` | `507b10823c4513064710a70fe565f9a1ee592985` | `artifact-transfer-core`, extraction design, adoption gate, and disposable pilot evidence | `MIT OR Apache-2.0` under the owner direction recorded in `provenance/SOURCE_GRANT.md` |
 | local `artifact-binding` design package | working-copy identity `4e91c8868545` | Active Cairn proposal, design, specification, and tasks; no Rust crate or adoption claim | `MIT OR Apache-2.0` for workspace-owned artifacts |
 
-These imports establish local source provenance only. They do not claim that the new `artifact` remote exists, that an immutable workspace revision has been published, or that any consumer has migrated.
+These imports establish historical source provenance only. The current independent public source is `OnixResearch/onix-artifact-public`, rooted at parentless export `f379f2583b5d152cfd6d58919738652861793c90` of Artifact snapshot `2a34ddd92a4eaf57d4d0de792dfa9aa4ea105121`. The imported history described above is provenance context, not ancestry published by the independent mirror. This source-only publication is NOT RELEASE-ADMITTED and does not establish any consumer migration or refresh historical proof claims.
 
 ## Semantic classification
 

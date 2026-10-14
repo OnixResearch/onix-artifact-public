@@ -1,7 +1,7 @@
 let Contracts = import "contracts.ncl" in
 {
   name = "artifact",
-  repository = "https://github.com/OnixResearch/onix-artifact",
+  repository = "https://github.com/OnixResearch/onix-artifact-public",
   license = "MIT OR Apache-2.0",
   packages = ["artifact-auth-core", "artifact-auth-ed25519", "artifact-transfer-core"],
   package_dependencies = [
